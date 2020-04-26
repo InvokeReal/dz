@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfAppMnemonica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppMnemonica"
+        mc:Ignorable="d"
+        Title="Мнемоника" Height="360" Width="410" KeyDown="newGame" Icon="Resources/icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="White">
+    <Grid Name="grid" Width="375" Height="300" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75"></ColumnDefinition>
+            <ColumnDefinition Width="75"></ColumnDefinition>
+            <ColumnDefinition Width="75"></ColumnDefinition>
+            <ColumnDefinition Width="75"></ColumnDefinition>
+            <ColumnDefinition Width="75"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Name="congratulations" HorizontalAlignment="Center" Height="180" Margin="0,10,0,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Center" Width="225" Grid.ColumnSpan="3" Grid.Column="1" Panel.ZIndex="5" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Rectangle Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Left" Height="180" Stroke="Black" VerticalAlignment="Top" Width="225"  StrokeThickness="0" Fill="White"/>
+
+            <Label Grid.Row="0" Name="gamers" Content="  " HorizontalAlignment="Center" Margin="1" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
+            <Label Grid.Row="1" Content="ЗАТРАЧЕНОЕ ВРЕМЯ:" HorizontalAlignment="Center" Margin="1" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="14"/>
+            <Label Grid.Row="2" Name="time" Content="02:32" Margin="1" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Width="63"/>
+            <Label Grid.Row="3" Content="&quot;Пробел&quot; — начать заново" HorizontalAlignment="Center" Margin="1" VerticalAlignment="Top" FontSize="10"/>
+            
+        </Grid>
+    </Grid>
+</Window>
