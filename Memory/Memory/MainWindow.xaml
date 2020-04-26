@@ -1,0 +1,33 @@
+﻿<Window x:Class="Memory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory"
+        mc:Ignorable="d"
+        Title="Memory game" Height="280" Width="450" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="/Image/bg.jpg" Grid.ColumnSpan="3" Grid.RowSpan="5" Height="300"></Image>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="3" FontSize="36" TextAlignment="Center" FontFamily="Cambria Math" Foreground="White" Background="#FFBF13FF" Margin="40 5">
+            Выберите сложность
+        </TextBlock>
+        <Button x:Name="EasyBtn" Grid.Row="3" Margin="30 10" FontSize="24" FontFamily="Cambria Math" Click="EasyBtn_Click">
+            Легко
+        </Button>
+        <Button x:Name="HardBtn" Grid.Row="3" Grid.Column="2" Margin="30 10" FontSize="24" FontFamily="Cambria Math" Click="HardBtn_Click">
+            Сложно
+        </Button>
+    </Grid>
+</Window>
